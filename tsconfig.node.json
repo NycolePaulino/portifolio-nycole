@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "composite": true, // <--- Adicionamos isso, como o erro pediu
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "strict": true
+  },
+  "include": ["vite.config.ts"]
+}
