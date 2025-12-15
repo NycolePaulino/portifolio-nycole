@@ -36,7 +36,7 @@ export default function ContactSection({ formData, handleFormChange, handleSubmi
                         <a href="https://github.com/nycolepaulino" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition-colors">
                             <Github size={32} />
                         </a>
-                        <a href="https://linkedin.com/in/nycolepaulino" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition-colors">
+                        <a href="https://www.linkedin.com/in/nycole-paulino-8102072a0/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition-colors">
                             <Linkedin size={32} />
                         </a>
                         </div>
