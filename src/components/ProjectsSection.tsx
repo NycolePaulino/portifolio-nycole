@@ -35,8 +35,8 @@ export default function ProjectsSection({ projects, openDetails }: ExtendedProje
                                 <Briefcase size={24} className="text-purple-400" />
                             </div>
                             <div className="flex-1">
-                                <h4 className="font-semibold text-lg">Desenvolvedora Front-end Freelancer</h4>
-                                <p className="text-purple-400 text-sm mb-2">Polygon • Março 2024 - Atualmente</p>
+                                <h4 className="font-semibold text-lg">Desenvolvedora Front-end</h4>
+                                <p className="text-purple-400 text-sm mb-2">Polygon • Março 2024 - Dezembro 2025</p>
                                 <ul className="text-gray-400 text-sm space-y-2">
                                     <li>• Desenvolvimento do SisApec, reconhecido pelo MEC e OIT</li>
                                     <li>• Criação de biblioteca de componentes reutilizáveis</li>
