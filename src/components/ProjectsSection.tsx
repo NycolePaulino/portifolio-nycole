@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Briefcase } from 'lucide-react';
 import ProjectCard from './ProjectCard';
 import { Project } from '../types'; 
