@@ -35,10 +35,10 @@ export default function HeroSection() {
                             </h1>
                         </div>
                         <p className="text-xl text-gray-300">
-                            Desenvolvedora Front-end
+                            Desenvolvedora Front-end & Full-Stack
                         </p>
                         <p className="text-gray-400 leading-relaxed">
-                            Especializada em React, TypeScript e Next.js. Transformo ideias em interfaces web modernas, responsivas e de alto desempenho.
+                            Especializada em criar interfaces modernas e de alta performance com React e Next.js, além de atuar no desenvolvimento de ponta a ponta com integrações complexas de IA, automações e arquitetura back-end (Supabase e Java).
                         </p>
                         <div className="flex space-x-4 pt-4">
                             <a href="#contato" className="bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 rounded-lg font-medium hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300">

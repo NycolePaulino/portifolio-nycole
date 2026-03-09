@@ -3,9 +3,9 @@ import { AboutSectionProps } from '../types';
 import SkillBar from './SkillBar';
 
 const infoCards = [
-    { icon: Briefcase, title: 'Experiência', description: 'Mais de 1 ano desenvolvendo soluções web modernas e escaláveis' },
+    { icon: Briefcase, title: 'Experiência', description: 'Mais de 1 ano desenvolvendo soluções web completas, escaláveis e focadas na experiência do usuário' },
     { icon: GraduationCap, title: 'Educação', description: 'Ciência da Computação - UNIFAL-MG (7° Período)' },
-    { icon: Layers, title: 'Especialização', description: 'Front-end com React, TypeScript e Next.js' },
+    { icon: Layers, title: 'Especialização', description: 'Ecosistema React/Next.js, Arquitetura de Software e Integrações (APIs/IA).' },
 ];
 
 
