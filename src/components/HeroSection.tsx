@@ -1,117 +1,71 @@
-import { useState, useEffect } from 'react';
+import { ArrowRight, Download, Github, Linkedin, Mail, MessageCircle } from 'lucide-react';
+import { Reveal } from './Reveal';
+import { Typewriter } from './Typewriter';
+import { Terminal } from './Terminal';
+import { WHATSAPP, LINKEDIN, GITHUB, EMAIL, CV_URL } from '../constants';
 
 export default function HeroSection() {
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-    useEffect(() => {
-        const section = document.getElementById('home');
-        
-        const handleMouseMove = (e: MouseEvent) => { 
-            if (section) {
-                const rect = section.getBoundingClientRect();
-                setMousePosition({
-                    x: e.clientX - rect.left,
-                    y: e.clientY - rect.top
-                });
-            }
-        };
-
-        section?.addEventListener('mousemove', handleMouseMove);
-        return () => section?.removeEventListener('mousemove', handleMouseMove);
-    }, []); 
-
     return (
-        <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
-            <div className="max-w-6xl mx-auto w-full">
-                <div className="grid md:grid-cols-2 gap-12 items-center">
-                    <div className="space-y-6 z-10">
-                        <div className="space-y-2">
-                            <p className="text-purple-400 text-lg font-medium">Olá, eu sou</p>
-                            <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-                                Nycole Paulino
-                                <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                                    Santos
-                                </span>
-                            </h1>
+        <section id="home" className="relative overflow-hidden pt-32 pb-24">
+            <div className="mx-auto max-w-6xl px-6">
+                <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:items-center">
+                    <Reveal>
+                        <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono text-primary">
+                            <span className="h-1.5 w-1.5 rounded-full bg-green-400 animate-pulse" />
+                            disponível para novas oportunidades
                         </div>
-                        <p className="text-xl text-gray-300">
-                            Desenvolvedora Front-end & Full-Stack
+                        <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+                            Nycole Paulino Santos
+                        </h1>
+                        <div className="mt-6 font-mono text-lg text-muted-foreground">
+                            <span className="text-primary">{'> '}</span>
+                            <Typewriter phrases={['Desenvolvedora Front-end & Full-Stack']} />
+                        </div>
+                        <p className="mt-6 max-w-xl text-base text-muted-foreground leading-relaxed">
+                            Desenvolvo aplicações web e mobile com{' '}
+                            <span className="text-foreground">React, Next.js e React Native</span>.
+                            Atualmente, tenho focado em{' '}
+                            <span className="text-foreground">integrações de IA, automações</span> e na
+                            criação de soluções que simplificam processos e melhoram a experiência do
+                            usuário.
                         </p>
-                        <p className="text-gray-400 leading-relaxed">
-                            Especializada em criar interfaces modernas e de alta performance com React e Next.js, além de atuar no desenvolvimento de ponta a ponta com integrações complexas de IA, automações e arquitetura back-end (Supabase e Java).
-                        </p>
-                        <div className="flex space-x-4 pt-4">
-                            <a href="#contato" className="bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 rounded-lg font-medium hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300">
-                                Entre em Contato
+                        <div className="mt-8 flex flex-wrap gap-3">
+                            <a
+                                href="#projetos"
+                                className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-medium text-primary-foreground shadow-glow hover:brightness-110 transition-all"
+                            >
+                                Ver Projetos <ArrowRight className="h-4 w-4" />
                             </a>
-                            <a href="#projetos" className="border border-purple-500 px-6 py-3 rounded-lg font-medium hover:bg-purple-500/10 transition-all duration-300">
-                                Ver Projetos
+                            <a
+                                href={CV_URL}
+                                download
+                                className="inline-flex items-center gap-2 rounded-lg border border-border bg-card/50 px-5 py-3 text-sm font-medium text-foreground hover:bg-card transition-colors"
+                            >
+                                Baixar currículo <Download className="h-4 w-4" />
                             </a>
                         </div>
-                    </div>
-                    <div className="relative h-96 flex items-center justify-center">
-                        <div className="absolute inset-0 overflow-hidden">
-                            <div className="space-y-3 opacity-40">
-                                <div className="flex items-center space-x-2 animate-pulse" style={{ animationDelay: '0s' }}>
-                                    <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                                    <div className="h-2 bg-gradient-to-r from-purple-500 to-transparent rounded w-64"></div>
-                                </div>
-                                <div className="flex items-center space-x-2 animate-pulse ml-8" style={{ animationDelay: '0.2s' }}>
-                                    <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
-                                    <div className="h-2 bg-gradient-to-r from-pink-500 to-transparent rounded w-48"></div>
-                                </div>
-                                <div className="flex items-center space-x-2 animate-pulse ml-8" style={{ animationDelay: '0.4s' }}>
-                                    <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
-                                    <div className="h-2 bg-gradient-to-r from-purple-400 to-transparent rounded w-56"></div>
-                                </div>
-                                <div className="flex items-center space-x-2 animate-pulse ml-16" style={{ animationDelay: '0.6s' }}>
-                                    <div className="w-3 h-3 bg-pink-400 rounded-full"></div>
-                                    <div className="h-2 bg-gradient-to-r from-pink-400 to-transparent rounded w-40"></div>
-                                </div>
-                                <div className="flex items-center space-x-2 animate-pulse ml-8" style={{ animationDelay: '0.8s' }}>
-                                    <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                                    <div className="h-2 bg-gradient-to-r from-purple-500 to-transparent rounded w-52"></div>
-                                </div>
-                                <div className="flex items-center space-x-2 animate-pulse" style={{ animationDelay: '1s' }}>
-                                    <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
-                                    <div className="h-2 bg-gradient-to-r from-pink-500 to-transparent rounded w-44"></div>
-                                </div>
-                                <div className="flex items-center space-x-2 animate-pulse ml-8" style={{ animationDelay: '1.2s' }}>
-                                    <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
-                                    <div className="h-2 bg-gradient-to-r from-purple-400 to-transparent rounded w-60"></div>
-                                </div>
-                                <div className="flex items-center space-x-2 animate-pulse ml-16" style={{ animationDelay: '1.4s' }}>
-                                    <div className="w-3 h-3 bg-pink-400 rounded-full"></div>
-                                    <div className="h-2 bg-gradient-to-r from-pink-400 to-transparent rounded w-36"></div>
-                                </div>
-                                <div className="flex items-center space-x-2 animate-pulse ml-16" style={{ animationDelay: '1.6s' }}>
-                                    <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                                    <div className="h-2 bg-gradient-to-r from-purple-500 to-transparent rounded w-48"></div>
-                                </div>
-                                <div className="flex items-center space-x-2 animate-pulse ml-8" style={{ animationDelay: '1.8s' }}>
-                                    <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
-                                    <div className="h-2 bg-gradient-to-r from-pink-500 to-transparent rounded w-56"></div>
-                                </div>
-                            </div>
+                        <div className="mt-10 flex items-center gap-5 text-muted-foreground">
+                            <a href={GITHUB} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors" aria-label="GitHub">
+                                <Github className="h-5 w-5" />
+                            </a>
+                            <a href={LINKEDIN} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors" aria-label="LinkedIn">
+                                <Linkedin className="h-5 w-5" />
+                            </a>
+                            <a href={`mailto:${EMAIL}`} className="hover:text-primary transition-colors" aria-label="Email">
+                                <Mail className="h-5 w-5" />
+                            </a>
+                            <a href={WHATSAPP} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors" aria-label="WhatsApp">
+                                <MessageCircle className="h-5 w-5" />
+                            </a>
                         </div>
-
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1 h-8 bg-purple-400 animate-pulse"></div>
-                        <div className="absolute bottom-1/4 left-1/4 w-40 h-40 bg-pink-500/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-                    </div>
+                    </Reveal>
+                    <Reveal direction="scale" delay={150}>
+                        <div className="relative">
+                            <div className="absolute -inset-4 -z-10 rounded-2xl bg-primary/20 blur-3xl" />
+                            <Terminal />
+                        </div>
+                    </Reveal>
                 </div>
-            </div>
-            <div 
-                className="absolute w-64 h-64 bg-purple-500/30 rounded-full blur-3xl transition-all duration-100 ease-out z-0 opacity-70" 
-                style={{ 
-                    transform: `translate(calc(${mousePosition.x}px - 50%), calc(${mousePosition.y}px - 50%))`,
-                    display: 'none',
-                }}
-            ></div>
-            <div className="absolute inset-0 opacity-20 pointer-events-none">
-                <div className="absolute inset-0" style={{
-                    backgroundImage: 'linear-gradient(rgba(168, 85, 247, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(168, 85, 247, 0.1) 1px, transparent 1px)',
-                    backgroundSize: '50px 50px'
-                }}></div>
             </div>
         </section>
     );

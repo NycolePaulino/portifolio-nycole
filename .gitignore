@@ -100,3 +100,6 @@ typings/
 # Vite production build
 dist
 dist-ssr
+
+# macOS
+.DS_Store
