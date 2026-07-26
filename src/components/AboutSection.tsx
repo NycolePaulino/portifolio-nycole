@@ -7,7 +7,7 @@ const cards = [
         icon: GraduationCap,
         label: 'Formação',
         value: 'Ciência da Computação',
-        desc: 'UNIFAL-MG, 7° período.',
+        desc: 'UNIFAL-MG, 8° período.',
     },
     {
         icon: Briefcase,
