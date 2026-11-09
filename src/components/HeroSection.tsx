@@ -19,15 +19,16 @@ export default function HeroSection() {
                         </h1>
                         <div className="mt-6 font-mono text-lg text-muted-foreground">
                             <span className="text-primary">{'> '}</span>
-                            <Typewriter phrases={['Desenvolvedora Front-end & Full-Stack']} />
+                            <Typewriter phrases={['Desenvolvedora de Software · IA aplicada']} />
                         </div>
                         <p className="mt-6 max-w-xl text-base text-muted-foreground leading-relaxed">
-                            Desenvolvo aplicações web e mobile com{' '}
-                            <span className="text-foreground">React, Next.js e React Native</span>.
-                            Atualmente, tenho focado em{' '}
-                            <span className="text-foreground">integrações de IA, automações</span> e na
-                            criação de soluções que simplificam processos e melhoram a experiência do
-                            usuário.
+                            Construo produtos com{' '}
+                            <span className="text-foreground">LLMs em uso real</span>: um app com
+                            assistente de IA publicado na App Store e no Google Play, e um agente com
+                            Function Calling que faz a triagem de cerca de 200 atendimentos por dia.
+                            Trabalho com{' '}
+                            <span className="text-foreground">Node.js, TypeScript, Fastify e PostgreSQL</span>,
+                            do levantamento de requisitos ao deploy.
                         </p>
                         <div className="mt-8 flex flex-wrap gap-3">
                             <a

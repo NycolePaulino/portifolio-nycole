@@ -5,14 +5,16 @@ import { TechIcon } from './TechIcon';
 
 const skills = [
     {
-        icon: Code2,
-        label: 'Front-end',
+        icon: Bot,
+        label: 'IA aplicada',
         items: [
-            { name: 'React', slug: 'react' },
-            { name: 'Next.js', slug: 'nextdotjs' },
-            { name: 'React Native', slug: 'react' },
-            { name: 'TypeScript', slug: 'typescript' },
-            { name: 'Tailwind CSS', slug: 'tailwindcss' },
+            { name: 'OpenAI', slug: 'openai' },
+            { name: 'Claude', slug: 'anthropic' },
+            { name: 'Gemini', slug: 'googlegemini' },
+            { name: 'Groq', slug: 'groq' },
+            { name: 'Function Calling', slug: 'openai' },
+            { name: 'RAG & Embeddings', slug: 'postgresql' },
+            { name: 'n8n', slug: 'n8n' },
         ],
     },
     {
@@ -20,19 +22,11 @@ const skills = [
         label: 'Back-end',
         items: [
             { name: 'Node.js', slug: 'nodedotjs' },
+            { name: 'TypeScript', slug: 'typescript' },
+            { name: 'Fastify', slug: 'fastify' },
+            { name: 'REST & Webhooks', slug: 'swagger' },
+            { name: 'JWT / OAuth2', slug: 'jsonwebtokens' },
             { name: 'Java Spring Boot', slug: 'springboot' },
-            { name: 'REST APIs', slug: 'swagger' },
-            { name: 'Docker', slug: 'docker' },
-            { name: 'Microsserviços', slug: 'kubernetes' },
-        ],
-    },
-    {
-        icon: Bot,
-        label: 'IA & Automação',
-        items: [
-            { name: 'n8n', slug: 'n8n' },
-            { name: 'OpenAI', slug: 'openai' },
-            { name: 'WhatsApp API', slug: 'whatsapp' },
         ],
     },
     {
@@ -40,7 +34,22 @@ const skills = [
         label: 'Dados & Infra',
         items: [
             { name: 'Supabase', slug: 'supabase' },
-            { name: 'Stripe', slug: 'stripe' },
+            { name: 'PostgreSQL', slug: 'postgresql' },
+            { name: 'pgvector', slug: 'postgresql' },
+            { name: 'Docker', slug: 'docker' },
+            { name: 'Microsserviços', slug: 'kubernetes' },
+        ],
+    },
+    {
+        icon: Code2,
+        label: 'Front-end & Mobile',
+        items: [
+            { name: 'React', slug: 'react' },
+            { name: 'Next.js', slug: 'nextdotjs' },
+            { name: 'Angular', slug: 'angular' },
+            { name: 'React Native', slug: 'react' },
+            { name: 'RxJS', slug: 'reactivex' },
+            { name: 'Tailwind CSS', slug: 'tailwindcss' },
         ],
     },
     {
@@ -59,6 +68,7 @@ const skills = [
             { name: 'Git', slug: 'git' },
             { name: 'Jira', slug: 'jira' },
             { name: 'Bitbucket', slug: 'bitbucket' },
+            { name: 'GitLab', slug: 'gitlab' },
             { name: 'Metodologias Ágeis', slug: 'scrumalliance' },
         ],
     },
@@ -71,7 +81,7 @@ export default function Skills() {
                 <SectionTitle
                     tag="// stack"
                     title="Com o que eu trabalho"
-                    subtitle="O que uso no dia a dia, do front ao back, passando por automação e IA."
+                    subtitle="O que uso no dia a dia: IA aplicada, back-end, dados e front."
                 />
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     {skills.map((s, i) => (

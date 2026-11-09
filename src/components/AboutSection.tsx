@@ -7,13 +7,13 @@ const cards = [
         icon: GraduationCap,
         label: 'Formação',
         value: 'Ciência da Computação',
-        desc: 'UNIFAL-MG, 8° período.',
+        desc: 'UNIFAL-MG, conclusão em dez. 2026.',
     },
     {
         icon: Briefcase,
         label: 'Experiência',
-        value: '1+ ano no mercado',
-        desc: 'Soluções web completas, escaláveis e focadas em UX.',
+        value: 'Desde 2025 no mercado',
+        desc: 'Back-end, front-end e agentes de IA, em empresa e como freelancer.',
     },
 ];
 
@@ -26,25 +26,24 @@ export default function AboutSection() {
                     <Reveal direction="left">
                         <div className="rounded-2xl border border-border bg-card/60 p-8 backdrop-blur">
                             <p className="text-base leading-relaxed text-muted-foreground">
-                                Sou a <span className="text-foreground">Nycole</span>, desenvolvedora Full
-                                Stack com foco em aplicações web e mobile. Comecei trabalhando mais com
-                                front-end, mas com o tempo fui ficando curiosa para entender como tudo
-                                funciona por trás das telas. Hoje gosto de participar da construção da
-                                solução como um todo, pensando desde a interface até as integrações, os
-                                dados e as automações.
+                                Sou a <span className="text-foreground">Nycole</span>, desenvolvedora de
+                                software. Comecei pelo front-end, mas com o tempo fui ficando curiosa para
+                                entender como tudo funciona por trás das telas. Hoje passo a maior parte do
+                                tempo no back-end e em produtos com IA: APIs, integrações, dados e agentes que
+                                resolvem uma tarefa de verdade.
                             </p>
                             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
                                 Trabalho principalmente com{' '}
-                                <span className="text-foreground">React, Next.js, React Native, TypeScript e Supabase</span>.
-                                Nos últimos meses também tenho me aprofundado bastante em{' '}
-                                <span className="text-foreground">integrações de IA e automações com n8n</span>,
-                                criando desde chatbots de atendimento até fluxos que automatizam processos e
-                                vendas.
+                                <span className="text-foreground">Node.js, TypeScript, Fastify e PostgreSQL</span>,
+                                e uso LLMs via API (OpenAI, Claude, Gemini) com{' '}
+                                <span className="text-foreground">Function Calling, RAG e embeddings</span>.
+                                No front, sigo usando React, Next.js, React Native e Angular no dia a dia.
                             </p>
                             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                                Já participei de um projeto reconhecido pelo MEC e pela OIT e atualmente
-                                desenvolvo um produto próprio, acompanhando todas as etapas, desde o
-                                levantamento dos requisitos até o desenvolvimento, deploy e manutenção.
+                                Hoje sou trainee na A2W Tecnologia, onde ajudo a transformar um CRM/ERP
+                                legado do agronegócio em micro frontends, e toco sozinha a plataforma da MilaniFlow, incluindo o agente
+                                que faz a triagem do atendimento. Em outubro de 2026 dei um minicurso na
+                                UNIFAL-MG sobre agentes de IA e RAG.
                             </p>
                             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
                                 O que mais gosto é resolver problemas de verdade e construir soluções que

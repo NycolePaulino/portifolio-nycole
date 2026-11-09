@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 
 const lines = [
-  { prompt: "$", text: "npx create-nycole-app --stack next+ai", delay: 60 },
+  { prompt: "$", text: "npx create-nycole-app --stack node+llm", delay: 60 },
   { prompt: ">", text: "→ Instalando dependências...", delay: 25, muted: true },
-  { prompt: ">", text: "✓ React + Next.js + TypeScript", delay: 25, ok: true },
-  { prompt: ">", text: "✓ Supabase conectado", delay: 25, ok: true },
-  { prompt: ">", text: "✓ Agente IA (n8n) inicializado", delay: 25, ok: true },
+  { prompt: ">", text: "✓ Node.js + Fastify + TypeScript", delay: 25, ok: true },
+  { prompt: ">", text: "✓ PostgreSQL + pgvector conectados", delay: 25, ok: true },
+  { prompt: ">", text: "✓ Agente IA (function calling) online", delay: 25, ok: true },
   { prompt: "$", text: "deploy --production", delay: 60 },
   { prompt: ">", text: "🚀 Portfólio online em nycole.dev", delay: 25, accent: true },
 ];

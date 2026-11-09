@@ -26,28 +26,28 @@ import draGabrielaImg from './assets/projetos/draGabriela.png';
 const projectsData: Project[] = [
     {
         title: 'MilaniFlow',
-        category: 'Automação & IA',
-        description: 'Automatizei o atendimento e a gestão de vendas da Milani com um robô de WhatsApp conectado ao n8n.',
-        fullDescription: 'A Milani recebia um volume grande de clientes vindos de transportadoras parceiras, e o atendimento inicial era feito na mão, lento e cheio de furos de comunicação.\n\nMontei uma automação ponta a ponta no n8n: um robô reconhece os pedidos assim que eles chegam, faz o primeiro atendimento pelo WhatsApp sozinho e já joga tudo em tempo real nos painéis do sistema. O tempo de espera do cliente caiu a praticamente zero e a gestão da equipe ficou bem mais tranquila.',
+        category: 'Agente de IA',
+        description: 'Plataforma de atendimento com um agente de IA que faz a triagem de cerca de 200 clientes por dia.',
+        fullDescription: 'A Milani recebe um volume grande de clientes vindos de transportadoras parceiras, e o atendimento inicial era feito na mão, lento e cheio de furos de comunicação.\n\nDesenvolvi sozinha a plataforma, do levantamento de requisitos ao deploy, e o agente que faz a triagem. A arquitetura usa backend próprio com a OpenAI API e Function Calling: o modelo interpreta a mensagem e pede uma ação por ferramenta, e o backend valida os dados, executa a operação e controla o estado do atendimento. Ele identifica a transportadora, valida códigos, organiza as vendas por conta e encaminha para um operador quando precisa, tudo integrado ao WhatsApp e ao Bitsac por APIs e webhooks.\n\nHoje a triagem atende em média 200 clientes por dia em validação, e a etapa seguinte do fluxo está em piloto com 10 clientes por dia. O próximo passo é uma base de conhecimento com RAG (pgvector e embeddings do Gemini).',
         imageUrl: milaniImg,
         liveUrl: 'https://www.milaniflow.com.br/',
-        tech: ['n8n', 'WhatsApp API', 'React', 'Next.js', 'Automação'],
+        tech: ['Node.js', 'Next.js', 'Supabase', 'OpenAI API', 'Function Calling', 'WhatsApp'],
         highlight: true
     },
     {
         title: 'DOR.IA Mobile',
         category: 'Full-Stack + IA',
-        description: 'Sistema de saúde com dois assistentes de IA (DAVI e Sophia) integrados a fluxos do n8n.',
-        fullDescription: 'O DOR.IA é um sistema voltado pra gestão de dores crônicas, e o desafio era ter assistentes virtuais que respondessem de forma fluida e em tempo real dentro da plataforma. Com o objetivo de recomendar especialistas mais próximos do paciente através de geolocalização.\n\nToquei o desenvolvimento de ponta a ponta: banco de dados e estado da aplicação com Supabase, interface, e a integração dos chat com os webhooks do n8n, cuidando pra que a resposta da IA chegasse rápido na tela do usuário, sem travar a experiência.',
+        description: 'App de acompanhamento da dor com assistente de IA, publicado na App Store e no Google Play (100+ downloads).',
+        fullDescription: 'O DOR.IA é um app voltado pra quem convive com dor crônica, e o desafio era ter assistentes virtuais (DAVI e Sophia) que respondessem de forma fluida dentro do app e ainda recomendassem especialistas próximos do paciente por geolocalização.\n\nDesenvolvi o app de ponta a ponta: backend em Node.js, TypeScript e Fastify, banco no Supabase, interface em React Native e o assistente usando OpenAI e Claude. A conversa passa por workflows do n8n via webhooks, e cuidei do gerenciamento de sessões, do encaminhamento por perfil, do histórico das conversas e do registro de métricas.',
         imageUrl: doriaMobileImg,
         appStoreUrl: 'https://apps.apple.com/br/app/dor-ia/id6775565801',
         playStoreUrl: 'https://play.google.com/store/apps/details?id=com.anonymous.doriamobilenovo',
-        tech: ['React Native', 'React', 'Next.js', 'Supabase', 'n8n', 'Inteligência Artificial'],
+        tech: ['React Native', 'Node.js', 'Fastify', 'Supabase', 'OpenAI', 'Claude', 'n8n'],
         highlight: true
     },
     {
         title: 'SisApec',
-        category: 'Full-Stack',
+        category: 'Front-end',
         description: 'Plataforma de saúde reconhecida pelo MEC e pela OIT, com formulários clínicos complexos.',
         fullDescription: 'O SisApec estrutura o Processo de Enfermagem com IA e interoperabilidade (HL7 FHIR). É um projeto de peso, reconhecido nacionalmente pelo MEC e pela OIT.\n\nFiquei responsável pelo front-end: arquitetei tudo em Next.js e TypeScript com foco em performance nos formulários clínicos, que são bem complexos. Construí um Design System próprio com Tailwind pra manter consistência visual e integrei com as APIs REST de forma segura.',
         imageUrl: sisapecImg,
